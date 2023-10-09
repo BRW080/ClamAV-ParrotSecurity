@@ -1,4 +1,4 @@
-# ClamAV, ClamTK ando Clam-daemon! 🛡
+# ClamAV, ClamTK and Clam-daemon! 🛡
 ![MasterHead](https://blog.desdelinux.net/wp-content/uploads/2020/07/clamav.jpg.webp)
 
 # ClamAV in GNU/Linux?
