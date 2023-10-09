@@ -17,14 +17,42 @@ sudo apt full-upgrade
 ## Steps to install ClamAV
 1. Clone the Github repository in terminal (CTRL+ALT+T):
 ```bash
-git clone https://github.com/BRW080/ProtonVPN-ParrotSecurity.git
+git clone https://github.com/BRW080/ClamAV-ParrotSecurity.git
 ```
 2. Access the newly created folder:
 ```bash
-cd ProtonVPN-ParrotSecurity
+cd ClamAV-ParrotSecurity
 ```
 
 3. Access the ProtonVPN folder:
 ```bash
-cd ProtonVPN
+cd ClamAV
 ```
+
+## Installing ClamAV, ClamTK and Clam-daemon
+1. Give execute permissions to the "install.sh" file:
+```bash
+chmod +x install.sh
+```
+
+2. Run the script once with execute permissions:
+```bash
+sudo bash install.sh
+```
+
+3. In case an error occurs when installing it (although it is very common), execute the following:
+```bash
+systemctl stop clamav-freshclam.service
+```
+
+4. Once the service is turned off, start the service again by executing:
+```bash
+systemctl start clamav-freshclam.service
+```
+
+5. Check if you installed it correctly:
+```bash
+sudo systemctl status clamav-freshclam
+```
+
+# APPLICATION TESTING
