@@ -56,3 +56,29 @@ sudo systemctl status clamav-freshclam
 ```
 
 # APPLICATION TESTING
+1. Scan for malware or any type of malicious file (in this case we will select the entire hard drive):
+```bash
+sudo clamscan -ri --exclude-dir=/sys/ /
+```
+
+### Steps to move files to quarantine
+1. Create a folder with the name you like, in this case it was Quarantine-ClamAV:
+```bash
+mkdir "Quarantine-ClamAV"
+```
+
+2. Then you have to go to the next file (you can choose whatever, recommended: NANO):
+```bash
+crontab -e
+```
+
+3. Once inside, in the last line of code we put the following:
+````bash
+30 00 * * * echo 3 > -ri --move /home/parrot/"Quarantine ClamAV" --exlude-dir=/sys/ /
+```
+
+3.1 That means that every day at 12:30 in the morning it will scan the entire hard drive and if it finds a malicious file it will quarantine it and send it to the specific folder in this case that you choose.
+
+### Credits:
+1. Repository created by: SilentShadowMaster@proton.me
+2. ClamAV Website: https://www.clamav.net/
