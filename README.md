@@ -73,7 +73,7 @@ crontab -e
 ```
 
 3. Once inside, in the last line of code we put the following:
-````bash
+```bash
 30 00 * * * echo 3 > -ri --move /home/parrot/"Quarantine ClamAV" --exlude-dir=/sys/ /
 ```
 
